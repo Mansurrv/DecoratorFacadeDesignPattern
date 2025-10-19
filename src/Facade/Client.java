@@ -1,8 +1,10 @@
 package Facade;
 
-public class Main {
+import Facade.facade.Facade;
+
+public class Client {
     public static void main(String[] args) {
-        PlanFacade planFacade = new PlanFacade();
+        Facade planFacade = new Facade();
         planFacade.plan();
     }
 }

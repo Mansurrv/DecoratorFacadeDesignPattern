@@ -1,7 +1,11 @@
-package Facade;
+package Facade.facade;
 
-public class PlanFacade {
-    CrossCountryRunning runner = new CrossCountryRunning();
+import Facade.start.StartCross;
+import Facade.race.Time;
+import Facade.race.Runners;
+
+public class Facade {
+    StartCross runner = new StartCross();
     Time time = new Time();
     Runners firstRunner = new Runners();
 

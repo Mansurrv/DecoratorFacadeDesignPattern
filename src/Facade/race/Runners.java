@@ -1,10 +1,11 @@
-package Facade;
+package Facade.race;
 
 public class Runners {
     public void finishInTime(Time time) {
-        if (time.isStarted()) {
+        if (time.isSFinished()) {
             System.out.println("Runner still running... ");
-        }else {
+        }
+        else {
             System.out.println("Runner successfully finished... ");
         }
     }

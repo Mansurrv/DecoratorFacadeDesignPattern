@@ -1,9 +1,9 @@
-package Facade;
+package Facade.race;
 
 public class Time {
     private boolean isFinished;
 
-    public boolean isStarted() {
+    public boolean isSFinished() {
         return isFinished;
     }
 
