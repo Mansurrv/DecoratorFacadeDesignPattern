@@ -1,0 +1,23 @@
+package Decorator.jobs;
+
+import Decorator.decorator.Decorator;
+import Decorator.position.Position;
+
+public class JuniorFitnessCoach extends Decorator {
+    private double bonus;
+
+    public JuniorFitnessCoach(Position position, double bonus) {
+        super(position);
+        this.bonus = bonus;
+    }
+
+    @Override
+    public String getInformation() {
+        return position.getInformation() + " + assist senior trainers, work with beginners";
+    }
+
+    @Override
+    public double getWage() {
+        return position.getWage() + bonus;
+    }
+}

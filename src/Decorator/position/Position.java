@@ -1,5 +1,6 @@
 package Decorator.position;
 
 public interface Position {
-    public String makeJob();
+    String getInformation();
+    double getWage();
 }
