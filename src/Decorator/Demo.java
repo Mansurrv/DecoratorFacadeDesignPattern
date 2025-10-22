@@ -12,18 +12,24 @@ public class Demo {
         float seniorWage = 91_000_000.91F;
 
         Position basicJob = new BasicFitnessJob("provides basic fitness sessions", "Coach Mansur", basicWage);
-        displayInfo(basicJob);
+        Position juniorFitnessCoach = new JuniorFitnessCoach(basicJob, juniorWage);
+        Position seniorFitnessCoach = new SeniorFitnessCoach(juniorFitnessCoach, seniorWage);
 
-        Position dietitian = new JuniorFitnessCoach(basicJob, juniorWage);
-        displayInfo(dietitian);
+        Position[] positions = {
+                basicJob,juniorFitnessCoach,seniorFitnessCoach
+        };
 
-        Position fitnessCoach = new SeniorFitnessCoach(dietitian, seniorWage);
-        displayInfo(fitnessCoach);
+        displayInfo(positions, 0);
     }
 
-    public static void displayInfo(Position position) {
+    public static void displayInfo(Position[] positions, int idx) {
+        if (idx==positions.length) return;
+
+        Position position = positions[idx];
         System.out.println("\n--- Fitness Job Information ---");
         System.out.println(position.getInformation());
         System.out.println("Total Wage: " + position.getWage() + "₸");
+
+        displayInfo(positions, idx+1);
     }
 }
