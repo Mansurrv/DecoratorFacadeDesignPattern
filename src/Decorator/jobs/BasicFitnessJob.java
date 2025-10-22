@@ -13,9 +13,6 @@ public class BasicFitnessJob implements Position {
         this.wage = wage;
     }
 
-    public BasicFitnessJob() {
-    }
-
     @Override
     public String getInformation() {
         return memberName + "'s basic fitness job: " + job;

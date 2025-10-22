@@ -3,7 +3,7 @@ package Decorator.decorator;
 import Decorator.position.Position;
 
 public class Decorator implements Position {
-    public Position position;
+    protected Position position;
 
     public Decorator(Position position) {
         this.position = position;
