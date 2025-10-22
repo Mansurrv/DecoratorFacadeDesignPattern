@@ -5,9 +5,9 @@ import Decorator.position.Position;
 public class BasicFitnessJob implements Position {
     private String job;
     private String memberName;
-    private double wage;
+    private float wage;
 
-    public BasicFitnessJob(String job, String memberName, double wage) {
+    public BasicFitnessJob(String job, String memberName, float  wage) {
         this.job = job;
         this.memberName = memberName;
         this.wage = wage;

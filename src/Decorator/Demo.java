@@ -7,13 +7,17 @@ import Decorator.position.Position;
 
 public class Demo {
     public static void main(String[] args) {
-        Position basicJob = new BasicFitnessJob("provides basic fitness sessions", "Coach Mansur", 1_000_000.1);
+        float basicWage = 1_000_000.1F;
+        float juniorWage = 9_000_000.9F;
+        float seniorWage = 91_000_000.91F;
+
+        Position basicJob = new BasicFitnessJob("provides basic fitness sessions", "Coach Mansur", basicWage);
         displayInfo(basicJob);
 
-        Position dietitian = new JuniorFitnessCoach(basicJob, 9_000_000.9);
+        Position dietitian = new JuniorFitnessCoach(basicJob, juniorWage);
         displayInfo(dietitian);
 
-        Position fitnessCoach = new SeniorFitnessCoach(dietitian, 91_000_000.91);
+        Position fitnessCoach = new SeniorFitnessCoach(dietitian, seniorWage);
         displayInfo(fitnessCoach);
     }
 

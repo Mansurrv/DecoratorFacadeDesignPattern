@@ -4,9 +4,9 @@ import Decorator.decorator.Decorator;
 import Decorator.position.Position;
 
 public class SeniorFitnessCoach extends Decorator {
-    private double bonus;
+    private float bonus;
 
-    public SeniorFitnessCoach(Position position, double bonus) {
+    public SeniorFitnessCoach(Position position, float bonus) {
         super(position);
         this.bonus = bonus;
     }
